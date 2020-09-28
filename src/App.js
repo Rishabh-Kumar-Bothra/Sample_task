@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import Container from "react-bootstrap/Container"
 
 import ProductList from "./components/ProductList";
 import CategoryList from './components/CategoryList';
@@ -33,8 +34,15 @@ function App() {
       <header className="App-header">
         <h1>Ustra</h1>
       </header>
-      <CategoryList list={categoryList} showCategory={showCategory} />
+      <Container>
+        <CategoryList list={categoryList} showCategory={showCategory} />
+        </Container>
+      <Container>
       <ProductList list={productList} />
+      </Container>
+      <footer className="App-footer">
+        <h2>Here goes the footer</h2>
+      </footer>
     </div>
   );
 }
