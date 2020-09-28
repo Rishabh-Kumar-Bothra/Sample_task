@@ -11,4 +11,8 @@
     transform: translate(-50%, -50%);
   }
 
+ .grabbing {
+    cursor: grabbing;
+  }
+
  
