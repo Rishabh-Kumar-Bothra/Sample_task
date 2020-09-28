@@ -2,13 +2,13 @@ import React from "react";
 
 import Product from "./Product";
 
-function ProductList(){
-
+function ProductList(props){
+    console.log(props.list);
     return(
         <div>
-            <Product />
-            <Product />
-            <Product />
+            {props.list.map(data =>(
+                <Product key={data.id} id={data.id} info={data} />
+            ))}
         </div>
     )
 }

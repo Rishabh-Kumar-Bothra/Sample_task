@@ -1,12 +1,11 @@
 import React from "react";
+import './Category.css';
 
-function Category(){
-
+function Category(props){
     return(
-        <div>
-            <h2>Category 1</h2>
-            <h2>Category 2</h2>
-            <h2>Category 3</h2>
+        <div className="container" id={props.id}>
+            <img src={props.info.category_image} alt="category" />
+            <h2 className="centered">{props.info.category_name}</h2>
         </div>
     )
 }
