@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
 import './App.css';
 
+import ProductList from "./components/ProductList";
+import Category from './components/Category';
+
+
 function App() {
+
+  useEffect(()=>{
+    fetch("https://backend.ustraa.com/rest/V1/api/catalog/v1.0.1?category_id=226")
+      .then((res)=>{
+        console.log("res",res);
+        // res.json()
+      })
+      .then((data)=>{
+        console.log("data",data);
+      })
+  },[])
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Ustra</h1>
       </header>
+      <Category />
+      <ProductList />
     </div>
   );
 }
