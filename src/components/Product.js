@@ -3,11 +3,11 @@ import Button from 'react-bootstrap/Button';
 import './Product.css';
 
 function Product(props){
-    console.log(props.info.final_price)
     return(
         <div>
-            <h4>{props.info.name}</h4>
-            <h5>&#8377; {props.info.final_price}</h5>
+            <h5>{props.info.name}</h5>
+            <img src={props.info.image_urls.x120} alt="product"/>
+            <h6>&#8377; {props.info.final_price}</h6>
             <h6 className="oldPrice">&#8377; {props.info.price}</h6>
             {props.info.is_in_stock ? 
             <Button variant="outline-success">Add to cart</Button> : 

@@ -3,7 +3,6 @@ import React from "react";
 import Product from "./Product";
 
 function ProductList(props){
-    console.log(props.list);
     return(
         <div>
             {props.list.map(data =>(
